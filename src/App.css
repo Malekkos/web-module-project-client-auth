@@ -34,7 +34,7 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: left;
-  border-bottom: 0.4rem solid #394357
+  border-bottom: 0.4rem solid #3b2f07
 }
 .friendDatabase {
 
@@ -55,6 +55,35 @@
   font-size: 1.9rem;
   text-decoration: none;
   color: rgba(224, 146, 29, 0.788);
+}
+
+.loginWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-Items: center;
+  height: 100%;
+}
+.credentialsWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.titleLogin {
+  color: rgba(224, 146, 29, 0.788);
+  font-size: 2.3rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.username, .password {
+  margin-top: 2rem;
+  color: rgba(224, 146, 29, 0.788);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.usernameInput, .passwordInput, .submitButton {
+  margin-top: 1.2rem
+}
+.submitButton {
+  width: 50%
+  
 }
 @keyframes App-logo-spin {
   from {

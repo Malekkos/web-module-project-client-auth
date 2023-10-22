@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: mistyrose
 }
 
 .App-logo {
@@ -28,6 +29,33 @@
   color: #61dafb;
 }
 
+.Navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: left;
+  border-bottom: 0.4rem solid #394357
+}
+.friendDatabase {
+
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(219, 177, 37)
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width:  60%;
+}
+.login, .friendList, .addFriend, .logout {
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: rgba(224, 146, 29, 0.788);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

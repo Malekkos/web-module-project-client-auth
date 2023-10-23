@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import {Link, Routes , Route} from 'react-router-dom';
 import Login from './Components/login';
+import FriendList from './Components/friendList';
 function App() {
-  const loggedIn = localStorage.getItem("token")
   return (
     <div className="App">
       <nav className="Navbar">
@@ -19,7 +19,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/friendList"/>
+        <Route path="/friendList" element={<FriendList />}/>
         <Route path="/addFriend"/>
       </Routes>
     </div>

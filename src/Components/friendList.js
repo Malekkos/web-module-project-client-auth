@@ -4,7 +4,7 @@ import { getAll } from "../mocks/data";
 import axios from "axios";
 
 const FriendList = () => {
-  const [friends, setFriends] = useState(getAll)
+  const [friends, setFriends] = useState("")
   const token = localStorage.getItem("token")
   // console.log(token)
   useEffect(() => { 
@@ -22,7 +22,7 @@ const FriendList = () => {
   return (
     <div>
       <h1 className="friendListTitle">Friend List</h1>
-      <Friend friends={friends} />
+      {friends === "" ?  "Getting friends!" :<Friend friends={friends} />}
     </div>
   )
 }

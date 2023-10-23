@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const initialData = {
   username: "",
@@ -8,7 +9,9 @@ const initialData = {
 
 const Login = () => {
   const [data, setData] = useState(initialData)
-  console.log(data)
+  const navigate = useNavigate()
+
+  // console.log(data)
   const onChange = (event) => {
     setData({...data, [event.target.name] :event.target.value})
   }
@@ -18,6 +21,8 @@ const Login = () => {
     .then(res => {
       console.log(res.data)
       localStorage.setItem("token", res.data.token)
+      setData(initialData)
+      navigate("/friendList")
     })
     .catch(err => {
       console.log(err)

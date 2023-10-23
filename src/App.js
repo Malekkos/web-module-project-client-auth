@@ -3,10 +3,11 @@ import './App.css';
 import {Link, Routes , Route} from 'react-router-dom';
 import Login from './Components/login';
 function App() {
+  const loggedIn = localStorage.getItem("token")
   return (
     <div className="App">
       <nav className="Navbar">
-        <div>
+        <div className="alignLeft">
           <Link to="/login" className="friendDatabase">Friends Database</Link>
         </div>
         <div className="wrapper">

@@ -1,10 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const initialState = { name: "", email: ""}
 
 const AddFriend = () => {
   const [friendDetails, setFriendDetails] = useState(initialState)
-
+  const navigate = useNavigate()
+useEffect(() => {
+  const token = localStorage.getItem("token")
+  // console.log(token)
+  token ? console.log("there is a token"): navigate("/login")
+}, [])
   const onChange = event => {
     event.preventDefault()
     setFriendDetails({...friendDetails, [event.target.name]: event.target.value})

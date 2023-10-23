@@ -83,8 +83,50 @@
 }
 .submitButton {
   width: 50%
-  
 }
+.friendsWrapper {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  justify-items: center;
+  /* align-items: center; */
+  width: 50%
+}
+.friendDetailsWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items:self-start;
+}
+.friend {
+  padding-left: 0.3rem;
+  border-left: 1rem solid rgba(224, 146, 29, 0.788);
+  margin-left: 2rem;
+  border-left-style: inset;
+  border-bottom: 0.7rem solid sienna;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.friendAge {
+  border-right: 0.5rem solid salmon;
+  margin-left: 3rem;
+  border-right-style: double;
+  border-top-style: double;
+  border-top: 0.5rem solid lightpink;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif cursive;
+  font-style:oblique
+}
+.friendListTitle {
+  color:peru ;
+  font-size: 2.3rem;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 200;
+  font-style: normal;
+  border-left: 20rem solid chocolate;
+  border-right: 20rem solid chocolate;
+  border-left-style: ridge;
+  border-right-style: ridge;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

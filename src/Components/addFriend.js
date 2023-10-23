@@ -30,10 +30,10 @@ useEffect(() => {
   }
   return (
     <form onSubmit={event => onSubmit(event)}>
-      <div>
-        <h1>Add Friend</h1>
-        <div>
-          <label>Friend Name</label>
+      <div className="addFriendWrapper">
+        <h1 className="addFriendTitle">Add Friend</h1>
+        <div className="addFriendName">
+          <label className="friendName">Friend Name</label>
           <input type="text" onChange={event => onChange(event)} name="name" value={friendDetails.name} />
         </div>
         <div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -10,11 +10,15 @@ const initialData = {
 const Login = () => {
   const [data, setData] = useState(initialData)
   const navigate = useNavigate()
-
   // console.log(data)
   const onChange = (event) => {
     setData({...data, [event.target.name] :event.target.value})
   }
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    console.log(token)
+    token ? navigate("/friends"):"no token"
+  }, [])
   const onSubmit = (event) => {
     event.preventDefault()
     axios.post("http://localhost:9000/api/login", data)
@@ -22,7 +26,7 @@ const Login = () => {
       console.log(res.data)
       localStorage.setItem("token", res.data.token)
       setData(initialData)
-      navigate("/friendList")
+      navigate("/friends")
     })
     .catch(err => {
       console.log(err)

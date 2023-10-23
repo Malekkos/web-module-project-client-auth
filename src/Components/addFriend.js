@@ -22,6 +22,7 @@ useEffect(() => {
     axios.post("http://localhost:9000/api/friends",  friendDetails, {headers: {authorization: token}})
     .then(res => {
       console.log(res)
+      setFriendDetails(initialState)
     })
     .catch(err => {
       console.log(err)

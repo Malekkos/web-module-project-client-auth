@@ -33,7 +33,7 @@ const AddFriend = () => {
           <input type="email" onChange={event => onChange(event)} name="email" value={friendDetails.email} />
         </div>
         <div>
-          <input type="submit" />
+          <input disabled={friendDetails.name == "" || friendDetails.email == "" ? true : false} type="submit" />
         </div>
       </div>
     </form>

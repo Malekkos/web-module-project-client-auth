@@ -3,6 +3,7 @@ import './App.css';
 import {Link, Routes , Route} from 'react-router-dom';
 import Login from './Components/login';
 import FriendList from './Components/friends';
+import AddFriend from './Components/addFriend';
 function App() {
   return (
     <div className="App">
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/friends" element={<FriendList />}/>
-        <Route path="/addFriend"/>
+        <Route path="/addFriend" element={<AddFriend />}/>
       </Routes>
     </div>
   );

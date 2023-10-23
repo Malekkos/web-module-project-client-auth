@@ -11,7 +11,7 @@ const Friend = (props) => {
         return (
         <div className="friendDetailsWrapper">
           <h3 className="friend" id={friend.id}>{friend.name} - {friend.email}</h3>
-          <h4 className="friendAge">{friend.name} is {friend.age} years old</h4>
+          {friend.age ? <h4 className="friendAge">{friend.name} is {friend.age} years old </h4> : <h4 className="friendAge">{friend.name} has no age!</h4>}
         </div>
       )
       })}

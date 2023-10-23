@@ -16,7 +16,7 @@ const Login = () => {
   }
   useEffect(() => {
     const token = localStorage.getItem("token")
-    console.log(token)
+    // console.log(token)
     token ? navigate("/friends"):"no token"
   }, [])
   const onSubmit = (event) => {

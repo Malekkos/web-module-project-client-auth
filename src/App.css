@@ -109,6 +109,7 @@
 .friendAge {
   border-right: 0.5rem solid salmon;
   margin-left: 3rem;
+  padding-right: 0.4rem;
   border-right-style: double;
   border-top-style: double;
   border-top: 0.5rem solid lightpink;
